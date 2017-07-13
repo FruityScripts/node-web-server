@@ -1,3 +1,5 @@
+const port = process.env.PORT || 3000;
+
 const express = require("express");
 const fs = require("fs");
 const hbs = require("hbs");
@@ -52,6 +54,6 @@ var app = express();
       });
     });
 
-    app.listen(3000, () => {
-      console.log("Starting server on port 3000");
+    app.listen(port, () => {
+      console.log(`Starting server on port ${ port }`);
     });
