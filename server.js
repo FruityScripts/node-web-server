@@ -29,9 +29,9 @@ var app = express();
       next();
     });
 
-    app.use((req, res, next) => {
-      res.render("maintainance.hbs");
-    });
+    // app.use((req, res, next) => {
+    //   res.render("maintainance.hbs");
+    // });
 
     app.use(express.static(__dirname + "/public/"));
 
@@ -45,6 +45,12 @@ var app = express();
     app.get("/about", (req, res) => {
       res.render("about.hbs", {
         title : "About Page",
+      });
+    });
+
+    app.get("/projects", (req, res) => {
+      res.render("projects.hbs", {
+        title : "Projects"
       });
     });
 
